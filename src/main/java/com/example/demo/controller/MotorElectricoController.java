@@ -15,56 +15,56 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-
-import com.example.demo.entity.Usuario;
-import com.example.demo.service.UsuarioService;
+import com.example.demo.entity.MotorElectrico;
+import com.example.demo.service.MotorElectricoService;
 
 
 @RestController
-@RequestMapping("/api/usuarios")
+@RequestMapping("/api/motores")
 @CrossOrigin(origins="*", methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
-public class UsuarioController {
+public class MotorElectricoController {
 	
 	@Autowired
-	UsuarioService usuarioService;
+	MotorElectricoService motorElectricoService;
 	
 	 @GetMapping("/{id}")
-	    public Optional<Usuario> buscarPorId(@PathVariable("id") Integer id) {
-	        return usuarioService.findById(id);
+	    public Optional<MotorElectrico> buscarPorId(@PathVariable("id") Integer id) {
+	        return motorElectricoService.findById(id);
 	    }
 
 	    @GetMapping("/listar")
-	    public List<Usuario> listarTodos() {
-	        return usuarioService.findAll();
+	    public List<MotorElectrico> listarTodos() {
+	        return motorElectricoService.findAll();
 	    }
 
 	    @PostMapping
-	    public Usuario guardar(@RequestBody Usuario u) {
-	        return usuarioService.save(u);
+	    public MotorElectrico guardar(@RequestBody MotorElectrico m) {
+	        return motorElectricoService.save(m);
 
 	    }
 	    
 	    @DeleteMapping("/{id}")
 	    public void eliminar(@PathVariable("id") Integer id ) {
-	    	usuarioService.deleteById(id);
+	    	motorElectricoService.deleteById(id);
 	    	
 	    }
 	    
 	    @PutMapping("/actualizar/{id}")
-	    public Usuario actualizar(@RequestBody Usuario u, @PathVariable("id") Integer id) {
+	    public MotorElectrico actualizar(@RequestBody MotorElectrico m, @PathVariable("id") Integer id) {
 
-	        Usuario eNBD = usuarioService.findById(id).get();
+	        MotorElectrico eNBD = motorElectricoService.findById(id).get();
 
 	        
-	        eNBD.setNombre(u.getNombre());
-	        eNBD.setApellido(u.getApellido());
-	        eNBD.setTipoDeSangre(u.getTipoDeSangre());
-	        eNBD.setCargo(u.getCargo());
-	        eNBD.setEmail(u.getEmail());
+	        eNBD.setMotorNombre(m.getMotorNombre());
+	        eNBD.setMotorMarca(m.getMotorMarca());
+	        eNBD.setAmperaje(m.getAmperaje());
+	        eNBD.setVoltaje(m.getVoltaje());
+	        eNBD.setMotorPotencia(m.getMotorPotencia());
+	        eNBD.setRodamientos(m.getRodamientos());
 
-	        usuarioService.save(eNBD);
+	        motorElectricoService.save(eNBD);
 
-	        return u;
+	        return m;
 	    }
 
 
