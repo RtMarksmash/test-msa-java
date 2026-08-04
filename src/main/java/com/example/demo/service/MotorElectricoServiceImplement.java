@@ -7,39 +7,37 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.MotorElectrico;
+import com.example.demo.repository.MotorElectricoRepository;
 
 @Service
 public class MotorElectricoServiceImplement implements MotorElectricoService {
 	
 	@Autowired
-	MotorElectricoService motorElectricoService;
+	MotorElectricoRepository motorElectricoRepository;
 
 	@Override
 	public Optional<MotorElectrico> findById(Integer id) {
 		// TODO Auto-generated method stub
-		return Optional.empty();
+		return motorElectricoRepository.findById(id);
 	}
 
 	@Override
 	public List<MotorElectrico> findAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return motorElectricoRepository.findAll();
 	}
 
 	@Override
 	public MotorElectrico save(MotorElectrico m) {
 		// TODO Auto-generated method stub
-		return null;
+		return motorElectricoRepository.save(m);
 	}
 
 	@Override
 	public void deleteById(Integer id) {
 		// TODO Auto-generated method stub
-		
+		motorElectricoRepository.deleteById(id);		
 	}
 
-	
-	
-	
 
 }
