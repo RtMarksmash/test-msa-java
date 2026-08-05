@@ -55,8 +55,8 @@ public class MotorElectricoController {
 	        MotorElectrico eNBD = motorElectricoService.findById(id).get();
 
 	        
-	        eNBD.setMotorNombre(m.getMotorNombre());
-	        eNBD.setMotorMarca(m.getMotorMarca());
+	        eNBD.setNombre(m.getNombre());
+	        eNBD.setMarca(m.getMarca());
 	        eNBD.setAmperaje(m.getAmperaje());
 	        eNBD.setVoltaje(m.getVoltaje());
 	        eNBD.setMotorPotencia(m.getMotorPotencia());

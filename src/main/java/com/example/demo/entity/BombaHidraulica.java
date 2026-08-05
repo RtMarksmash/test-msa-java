@@ -16,29 +16,29 @@ public class BombaHidraulica {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	@Column(name="bomba_nombre")
-	private String bombaNombre;
+	private String nombre;
 	@Column(name="bomba_marca")
-	private String bombaMarca;
+	private String marca;
 	@Column(name="altura_dinamica")
 	private Integer alturaDinamica;
 	@Column(name="caudal")
 	private Integer caudal;
 	@Column(name="diametro_succion")
-	private Integer diametroSuccion;
+	private Integer diametroDeSuccion;
 	@Column(name="diametro_descarga")
-	private String diametroDescarga;
+	private Integer diametroDeDescarga;
 	
 	
-	public BombaHidraulica(Integer id, String bombaNombre, String bombaMarca, Integer alturaDinamica, Integer caudal,
-			Integer diametroSuccion, String diametroDescarga) {
+	public BombaHidraulica(Integer id, String nombre, String marca, Integer alturaDinamica, Integer caudal,
+			Integer diametroDeSuccion, Integer diametroDeDescarga) {
 		super();
 		this.id = id;
-		this.bombaNombre = bombaNombre;
-		this.bombaMarca = bombaMarca;
+		this.nombre = nombre;
+		this.marca = marca;
 		this.alturaDinamica = alturaDinamica;
 		this.caudal = caudal;
-		this.diametroSuccion = diametroSuccion;
-		this.diametroDescarga = diametroDescarga;
+		this.diametroDeSuccion = diametroDeSuccion;
+		this.diametroDeDescarga = diametroDeDescarga;
 	}
 
 
@@ -57,23 +57,23 @@ public class BombaHidraulica {
 	}
 
 
-	public String getBombaNombre() {
-		return bombaNombre;
+	public String getNombre() {
+		return nombre;
 	}
 
 
-	public void setBombaNombre(String bombaNombre) {
-		this.bombaNombre = bombaNombre;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 
-	public String getBombaMarca() {
-		return bombaMarca;
+	public String getMarca() {
+		return marca;
 	}
 
 
-	public void setBombaMarca(String bombaMarca) {
-		this.bombaMarca = bombaMarca;
+	public void setMarca(String marca) {
+		this.marca = marca;
 	}
 
 
@@ -97,26 +97,26 @@ public class BombaHidraulica {
 	}
 
 
-	public Integer getDiametroSuccion() {
-		return diametroSuccion;
+	public Integer getDiametroDeSuccion() {
+		return diametroDeSuccion;
 	}
 
 
-	public void setDiametroSuccion(Integer diametroSuccion) {
-		this.diametroSuccion = diametroSuccion;
+	public void setDiametroDeSuccion(Integer diametroDeSuccion) {
+		this.diametroDeSuccion = diametroDeSuccion;
 	}
 
 
-	public String getDiametroDescarga() {
-		return diametroDescarga;
+	public Integer getDiametroDeDescarga() {
+		return diametroDeDescarga;
 	}
 
 
-	public void setDiametroDescarga(String diametroDescarga) {
-		this.diametroDescarga = diametroDescarga;
+	public void setDiametroDeDescarga(Integer diametroDeDescarga) {
+		this.diametroDeDescarga = diametroDeDescarga;
 	}
 	
 	
-	
+
 	
 }

@@ -37,7 +37,7 @@ public class BombaHidraulicaServiceImple implements BombaHidraulicaService {
 	@Override
 	public void deleteById(Integer id) {
 		// TODO Auto-generated method stub
-		
+		bombaHidraulicaRepository.deleteById(id);
 	}
 
 	

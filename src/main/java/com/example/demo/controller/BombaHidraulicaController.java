@@ -55,12 +55,12 @@ public class BombaHidraulicaController {
 	        BombaHidraulica eNBD = bombaHidraulicaService.findById(id).get();
 
 	        
-	        eNBD.setBombaNombre(b.getBombaNombre());
-	        eNBD.setBombaMarca(b.getBombaMarca());
+	        eNBD.setNombre(b.getNombre());
+	        eNBD.setMarca(b.getMarca());
 	        eNBD.setAlturaDinamica(b.getAlturaDinamica());
 	        eNBD.setCaudal(b.getCaudal());
-	        eNBD.setDiametroSuccion(b.getDiametroSuccion());
-	        eNBD.setDiametroDescarga(b.getDiametroDescarga());
+	        eNBD.setDiametroDeSuccion(b.getDiametroDeSuccion());
+	        eNBD.setDiametroDeDescarga(b.getDiametroDeDescarga());
 
 	        bombaHidraulicaService.save(eNBD);
 

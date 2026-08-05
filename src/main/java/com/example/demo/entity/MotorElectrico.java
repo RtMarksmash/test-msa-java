@@ -16,9 +16,9 @@ public class MotorElectrico {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	@Column(name="motor_nombre")
-	private String motorNombre;
+	private String nombre;
 	@Column(name="motor_marca")
-	private String motorMarca;
+	private String marca;
 	@Column(name="amperaje")
 	private Integer amperaje;
 	@Column(name="voltaje")
@@ -29,12 +29,12 @@ public class MotorElectrico {
 	private String rodamientos;
 	
 	
-	public MotorElectrico(Integer id, String motorNombre, String motorMarca, Integer amperaje, Integer voltaje,
+	public MotorElectrico(Integer id, String nombre, String marca, Integer amperaje, Integer voltaje,
 			Integer motorPotencia, String rodamientos) {
 		super();
 		this.id = id;
-		this.motorNombre = motorNombre;
-		this.motorMarca = motorMarca;
+		this.nombre = nombre;
+		this.marca = marca;
 		this.amperaje = amperaje;
 		this.voltaje = voltaje;
 		this.motorPotencia = motorPotencia;
@@ -57,23 +57,23 @@ public class MotorElectrico {
 	}
 
 
-	public String getMotorNombre() {
-		return motorNombre;
+	public String getNombre() {
+		return nombre;
 	}
 
 
-	public void setMotorNombre(String motorNombre) {
-		this.motorNombre = motorNombre;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 
-	public String getMotorMarca() {
-		return motorMarca;
+	public String getMarca() {
+		return marca;
 	}
 
 
-	public void setMotorMarca(String motorMarca) {
-		this.motorMarca = motorMarca;
+	public void setMarca(String marca) {
+		this.marca = marca;
 	}
 
 
@@ -119,5 +119,4 @@ public class MotorElectrico {
 	
 	
 	
-
 }
