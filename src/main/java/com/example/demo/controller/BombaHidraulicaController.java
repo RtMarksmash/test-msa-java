@@ -21,7 +21,7 @@ import com.example.demo.service.BombaHidraulicaService;
 
 @RestController
 @RequestMapping("/api/bombas")
-@CrossOrigin(origins="*", methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
+@CrossOrigin(origins="*", methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE,RequestMethod.OPTIONS})
 public class BombaHidraulicaController {
 	
 	@Autowired

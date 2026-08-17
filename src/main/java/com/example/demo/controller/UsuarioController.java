@@ -22,7 +22,7 @@ import com.example.demo.service.UsuarioService;
 
 @RestController
 @RequestMapping("/api/usuarios")
-@CrossOrigin(origins="*", methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
+@CrossOrigin(origins="*", methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE,RequestMethod.OPTIONS})
 public class UsuarioController {
 	
 	@Autowired

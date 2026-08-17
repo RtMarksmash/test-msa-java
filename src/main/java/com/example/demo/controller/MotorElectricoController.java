@@ -21,7 +21,7 @@ import com.example.demo.service.MotorElectricoService;
 
 @RestController
 @RequestMapping("/api/motores")
-@CrossOrigin(origins="*", methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
+@CrossOrigin(origins="*", methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE,RequestMethod.OPTIONS})
 public class MotorElectricoController {
 	
 	@Autowired
